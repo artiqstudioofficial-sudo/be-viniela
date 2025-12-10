@@ -6,9 +6,10 @@ import { UPLOAD_ROOT } from "./config/upload";
 import { query } from "./lib/db";
 import careersRoutes from "./routes/careersRoutes";
 import newsRoutes from "./routes/newsRoutes";
-import partnerRoutes from "./routes/partnerRoutes"; // ⬅️ TAMBAHAN
+import partnerRoutes from "./routes/partnerRoutes";
 import teamRoutes from "./routes/teamRoutes";
 import uploadRoutes from "./routes/uploadRoutes";
+import contactRoutes from "./routes/contactRoutes";
 
 const app = express();
 const PORT = 4111;
@@ -55,6 +56,9 @@ app.use("/api/team", teamRoutes);
 
 // routes partners CRUD
 app.use("/api/partners", partnerRoutes);
+
+// routes contact messages
+app.use("/api/contact-messages", contactRoutes);
 
 /**
  * GET /api/db-test
