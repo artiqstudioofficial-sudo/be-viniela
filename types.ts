@@ -2,11 +2,7 @@
 /*                                   NEWS                                     */
 /* -------------------------------------------------------------------------- */
 
-<<<<<<< HEAD
-export type NewsCategory = 'company' | 'division' | 'industry' | 'press';
-=======
 export type NewsCategory = "company" | "division" | "industry" | "press";
->>>>>>> 0aa78e2219d812ec5973babf28b554c61c09bfd4
 
 export interface NewsRow {
   id: string;
@@ -44,11 +40,7 @@ export interface NewsArticleDto {
 /*                               CAREERS / JOBS                               */
 /* -------------------------------------------------------------------------- */
 
-<<<<<<< HEAD
-export type JobType = 'Full-time' | 'Part-time' | 'Contract' | 'Internship';
-=======
 export type JobType = "Full-time" | "Part-time" | "Contract" | "Internship";
->>>>>>> 0aa78e2219d812ec5973babf28b554c61c09bfd4
 
 /* ------------------------------- Job Listing ------------------------------- */
 
@@ -151,8 +143,6 @@ export interface PartnerDto {
   name: string;
   logoUrl: string;
 }
-<<<<<<< HEAD
-=======
 
 /* -------------------------------------------------------------------------- */
 /*                               CONTACT MESSAGES                             */
@@ -176,4 +166,3 @@ export interface ContactMessageDto {
   message: string;
   date: string; // ISO string dari created_at
 }
->>>>>>> 0aa78e2219d812ec5973babf28b554c61c09bfd4
