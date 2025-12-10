@@ -1,4 +1,3 @@
-// src/index.ts
 import cors from "cors";
 import express, { Request, Response } from "express";
 
