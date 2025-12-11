@@ -1,4 +1,3 @@
-import cors from "cors";
 import express, { Request, Response } from "express";
 
 import { UPLOAD_ROOT } from "./config/upload";
@@ -13,18 +12,27 @@ import contactRoutes from "./routes/contactRoutes";
 const app = express();
 const PORT = 4111;
 
+import cors, { CorsOptions } from "cors";
+
+const corsOptions: CorsOptions = {
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  optionsSuccessStatus: 204,
+};
+
+app.use(cors(corsOptions));
+
 /* -------------------------------------------------------------------------- */
 /*                               STATIC UPLOADS                               */
 /* -------------------------------------------------------------------------- */
 
-// Serve file statis dari folder uploads
 app.use("/uploads", express.static(UPLOAD_ROOT));
 
 /* -------------------------------------------------------------------------- */
 /*                                 MIDDLEWARE                                 */
 /* -------------------------------------------------------------------------- */
 
-app.use(cors());
 app.use(
   express.json({
     limit: "20mb",
