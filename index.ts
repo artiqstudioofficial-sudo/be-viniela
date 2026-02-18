@@ -21,6 +21,7 @@ const PORT = 4111;
 const allowedOrigins = [
   'http://localhost:3000',
   'http://127.0.0.1:3000',
+  'https://viniela.id',
   // tambah domain FE produksi kamu di sini
   // "https://your-frontend.com",
 ];
